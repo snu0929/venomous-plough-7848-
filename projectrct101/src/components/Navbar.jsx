@@ -4,15 +4,18 @@ import logo from '../Images/shopping-cart.png';
 import acount from '../Images/account.png';
 import search from '../Images/magnifying-glass.png';
 import location from '../Images/location.png'
+import Middle from './Middle'
 
 function Navbar(){
  
-    return <Box position="sticky" top={0}>
-       <Center bg="#004e80" color="white" h="48px">
+    return <Box >
+      <Center bg="#004e80" color="white" h="48px">
        SPRING FISHING CLASSIC   |  Shop Now >
        </Center>
+      <Box position="sticky" top={0} bg="white">
        
-       <HStack cursor={"pointer"} fontWeight={"600"} m="10px">
+       
+       <HStack cursor={"pointer"} fontWeight={"600"}  m="10px">
        <Spacer/>
         <Image src={location} width="22px"/><Text>My Store : </Text><Text color="blue">Find Store</Text>
        
@@ -51,7 +54,7 @@ function Navbar(){
        <Divider/>
        <Center>
         
-       <Stack direction={['column', 'row']} gap="40px" fontWeight="50" p="10px" >
+       <Stack direction={[]} gap="40px" fontWeight="50" p="10px" >
         
         <Heading size="md" fontWeight="400"style={{fontFamily: "Arial, sans-serif",}} >Fishing </Heading>
         <Heading size="md" fontWeight="400" style={{fontFamily: "Arial, sans-serif",}} >Boating</Heading>
@@ -67,6 +70,8 @@ function Navbar(){
        </Stack>
        </Center>
        <Divider/>
+       </Box>
+       <Middle/>
     </Box>
 }
 export default Navbar
