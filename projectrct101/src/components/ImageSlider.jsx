@@ -79,7 +79,7 @@ const ImageSlider = () => {
             transition: "transform 0.3s ease-out",
             transform: `translateX(-${(index * 100) / images.length}%)`,
             width: `${images.length * 25}%`,
-            gap:"5",
+            gap:"5px",
             cursor:"pointer",
             shadow:"box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
           },
@@ -96,7 +96,7 @@ const ImageSlider = () => {
                 src={image.src}
                 alt={image.id}
                 h={isMobile ? "200px" : "400px"}
-                w="100%"
+                w="500px"
                 objectFit="cover"
               />
             </Box>

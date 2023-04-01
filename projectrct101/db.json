@@ -1,0 +1,14 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "name": "",
+        "type": "fine_dining",
+        "rating": 4.5,
+        "number_of_votes": 588,
+        "price_starts_from": 925,
+        "image": "https://picsum.photos/200"
+      }
+      
+    ]
+  }

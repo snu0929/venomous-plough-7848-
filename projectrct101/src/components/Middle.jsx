@@ -1,12 +1,32 @@
-import {Box,Center,Divider,Heading,HStack,Image, SimpleGrid, VStack,Stack, Grid} from '@chakra-ui/react'
+import {Box,Center,Divider,Heading,Image, SimpleGrid, VStack, Grid,Text} from '@chakra-ui/react'
 import ImageSlider from './ImageSlider'
+
 
 function Middle(){
     return <Box w={"95%"} m="auto">
         <VStack spacing={6} mt={4}>
-        <Center>
-        <Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1440/v1680019249/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/BPS_Homepage-Main.png"/>                              
-        </Center>
+        <Box position="relative">
+      <Box
+        as="img"
+        src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_1440/v1680019249/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/BPS_Homepage-Main.png"
+        alt="Sample image"
+        width="100%"
+        height="auto"
+      />
+      <Text
+        position="absolute"
+        top="50%"
+        left="20%"
+        transform="translate(-50%, -50%)"
+        fontSize="2xl"
+        fontWeight="bold"
+        color="white"
+        textShadow="1px 1px #000"
+      >
+        <Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_479/v1679582428/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/hero-logo.png"/>
+      </Text>
+    </Box>
+
         <Box w="100%" h="100px" bg="rgb(146,34,19)" m="auto" color="white" >
           <Center>< Heading pt="20px" color="gold" >EXCLUSIVE CLUB MEMBER SAVING</Heading></Center>
         </Box>
@@ -21,12 +41,12 @@ function Middle(){
             <Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_591/v1680025918/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/BPS_Easter-text.png"/>
         </SimpleGrid>
         
-        <Grid display={{ base: "block", md: "grid", sm:"grid" }} gridTemplateColumns={{ base: "1fr", sm:"repeat(2, 1fr)", md: "repeat(5, 1fr)" }} gridGap={4}>
-            <Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_263/v1680098709/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/Homepage_Cat-1.png"/>
-            <Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_263/v1680098709/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/Homepage_Cat-2.png"/>
-            <Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_263/v1680098709/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/Homepage_Cat-3.png"/>
-            <Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_263/v1680098709/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/Homepage_Cat-4.png"/>
-            <Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_263/v1680098709/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/Homepage_Cat-5.png"/>
+        <Grid display={{ base: "block", md: "grid", sm:"grid" }} gridTemplateColumns={{ base: "1fr", sm:"repeat(2, 1fr)", md: "repeat(5, 1fr)" }} gridGap={4} boxShadow="md">
+            <Box><Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_263/v1680098709/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/Homepage_Cat-1.png"/></Box>
+            <Box><Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_263/v1680098709/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/Homepage_Cat-2.png"/></Box>
+            <Box><Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_263/v1680098709/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/Homepage_Cat-3.png"/></Box>
+            <Box><Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_263/v1680098709/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/Homepage_Cat-4.png"/></Box>
+            <Box><Image src="https://assets.basspro.com/image/upload/c_scale,f_auto,q_auto,w_263/v1680098709/DigitalCreative/2023/Campaigns/Wk13-3-30/Homepage/BPS/Homepage_Cat-5.png"/></Box>
 
          </Grid>
          <ImageSlider/>
