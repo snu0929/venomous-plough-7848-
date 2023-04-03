@@ -1,13 +1,16 @@
 import {Box,} from '@chakra-ui/react'
+
 import './App.css';
 
-import Main from './components/Main';
+import AllRoutes from './components/AllRoutes';
 
 function App() {
   return (
    <Box>
-    <Main/>
-    
+    {/* <Main/> */}
+    {/* <ProductPage/> */}
+    {/* <SingleProduct/> */}
+    <AllRoutes/>
    </Box>
   );
 }

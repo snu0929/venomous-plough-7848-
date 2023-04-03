@@ -1,9 +1,12 @@
 import {Box,Center,Divider,Heading,Image, SimpleGrid, VStack, Grid,Text} from '@chakra-ui/react'
 import ImageSlider from './ImageSlider'
+import Navbar from './Navbar'
 
 
 function Middle(){
-    return <Box w={"95%"} m="auto">
+    return <Box>
+    <Navbar/>
+    <Box w={"95%"} m="auto">
         <VStack spacing={6} mt={4}>
         <Box position="relative">
       <Box
@@ -73,6 +76,8 @@ function Middle(){
         </VStack>
         
        
+    </Box>
+    
     </Box>
 }
 
