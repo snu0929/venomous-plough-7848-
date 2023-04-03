@@ -6,11 +6,12 @@ import logo from '../Images/shopping-cart.png';
 import acount from '../Images/account.png';
 
 import location from '../Images/location.png'
+import LoginDrawer from './LoginDrower';
 
 
 
 
-function Navbar(){
+function Navbar({handleSearchChange,searchQuery}){
  
  
     return <Box >
@@ -22,6 +23,7 @@ function Navbar(){
        
        <HStack cursor={"pointer"} fontWeight={"600"}  m="10px">
        <Spacer/>
+       
         <Image src={location} width="22px"/><Text>My Store : </Text><Text color="blue">Find Store</Text>
        
         <Text color="brown">FREE Shipping</Text> <Text>On Order $50+</Text>
@@ -32,7 +34,7 @@ function Navbar(){
        <Divider/>
        <HStack width="92%" m="auto">
         <Spacer/>
-        <Image width="100px" src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/bass-pro-logo-2x.png"/>
+       <Link to="/"> <Image width="100px" src="https://assetshare.basspro.com/content/dam/bps-general-assets/web/site-elements/images/Redesign/Header/bass-pro-logo-2x.png"/></Link>
       
 <InputGroup size="lg">
   <InputLeftElement
@@ -49,11 +51,15 @@ function Navbar(){
     
     bg="rgb(229,229,229)"
     
+    value={searchQuery}
+    onChange={handleSearchChange}
+    
     _focus={{ boxShadow: "outline" }}
   />
 </InputGroup>
-        <Image src={acount} width ="40px"/>
-        <Image src={logo} width="40px"/>
+        <LoginDrawer/>
+        
+        <Link to="/cart"><Image src={logo} width="40px"/></Link>
         
        </HStack>
        <Divider/>
@@ -62,7 +68,7 @@ function Navbar(){
        <Stack direction={[]} gap="40px" fontWeight="50" p="10px" cursor={"pointer"} >
         
       
-       <Link to="/product"><Heading size="md" fontWeight="400" style={{fontFamily: "Arial, sans-serif",}} >Fishing</Heading></Link>
+      <Link to="/product"><Heading size="md" fontWeight="400" style={{fontFamily: "Arial, sans-serif",}} >Fishing</Heading></Link>
         <Heading size="md" fontWeight="400" style={{fontFamily: "Arial, sans-serif",}} >Boating</Heading>
         <Heading size="md" fontWeight="400" style={{fontFamily: "Arial, sans-serif",}} >Shooting</Heading>
         <Heading size="md" fontWeight="400" style={{fontFamily: "Arial, sans-serif",}} >Hunting</Heading>

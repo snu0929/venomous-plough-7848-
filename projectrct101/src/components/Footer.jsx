@@ -12,8 +12,9 @@ import cloud from'../Images/cloud-computing.png'
 function Footer(){
     return (
         <>
+        <Box bg="gray.100" color="black" pt={5} mt={5}>
          <Box>
-                    <Flex gap={5} mt={5} bg="green.100">
+                    <Flex gap={5} mt={5} >
                         
                             <Text>CONTACT BASS PRO SHOPS</Text>
                             <Image w={30}src={chat}></Image>
@@ -31,7 +32,7 @@ function Footer(){
                 </Box>
         <Box  display={{ base: "grid", md: "grid",sm:"grid" }}
         gridTemplateColumns={{ base: "1fr",sm:"1fr 1fr", md: "1fr 1fr 1fr 1fr" }}
-        gridGap="4" mt="4" p="8" bg="rgb(247,244,236)">
+        gridGap="4" mt="4" p="8" >
             <Box>
                 <ul>
                     <Heading as='h1' size="md">HELP</Heading>
@@ -100,6 +101,7 @@ function Footer(){
           </Box>
             </Box>
 
+        </Box>
         </Box>
         </>
     );
